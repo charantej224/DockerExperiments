@@ -26,17 +26,12 @@ public class Employee implements Serializable {
 	@Column(name = "emp_name")
 	private String empName;
  
-	@JsonProperty("Emp_department")
-	@Column(name = "dept_id")
-	private long deptId;
- 
 	public Employee() {
 	}
  
 	public Employee(long empId,String empName, long deptId) {
 		this.empId = empId;
 		this.empName = empName;
-		this.deptId = deptId;
 	}
  
 	
