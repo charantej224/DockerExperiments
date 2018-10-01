@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: dept-rc
+spec:
+  replicas: 5
+  selector:
+      app: dept
+  template:
+    metadata:
+      labels:
+         app: dept
+    spec:
+      containers:
+        - name: dept-cnt
+          image: charantej224/dept1:1
+          ports:
+          - containerPort: 8080
